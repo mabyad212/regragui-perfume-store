@@ -136,6 +136,19 @@
     <small>© <span id="year"></span> REGRAGUI PERFUME · TANGER, MAROC</small>
   </footer>
   <a class="floating-whatsapp" href="https://wa.me/212766384091" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+  <script>
+    // Keep the cinematic hero video looping even if a browser misses native loop.
+    document.addEventListener("DOMContentLoaded", () => {
+      const heroVideo = document.querySelector(".hero-background-video");
+      if (!heroVideo) return;
+      heroVideo.loop = true;
+      heroVideo.addEventListener("ended", () => {
+        heroVideo.currentTime = 0;
+        const replay = heroVideo.play();
+        if (replay && typeof replay.catch === "function") replay.catch(() => {});
+      });
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
