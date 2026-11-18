@@ -131,3 +131,19 @@
 @keyframes scentBrandIn{to{opacity:1;transform:translateY(0)}}
 @keyframes scentIntroOut{to{opacity:0;visibility:hidden}}
 @media(prefers-reduced-motion:reduce){.scent-intro{animation:scentIntroOut .4s ease .3s forwards}.scent-intro-brand,.scent-smoke{animation:none;opacity:1}}
+
+/* Regragui floral perfume-bottle logo system */
+.site-header{min-height:88px}
+.site-header .brand{display:flex;align-items:center;min-width:0}
+.brand-logo{display:block;width:104px;height:82px;object-fit:contain;object-position:center}
+.footer-logo{width:132px;height:116px}
+.scent-intro-brand{width:min(72vw,390px);display:flex;justify-content:center}
+.scent-intro-logo{display:block;width:100%;height:auto;max-height:72vh;object-fit:contain;filter:drop-shadow(0 0 24px rgba(197,165,104,.12))}
+.scent-intro-brand{opacity:0;transform:translateY(12px);animation:scentBrandIn 1.15s ease .35s forwards}
+.site-footer .brand{display:flex;align-items:center}
+@media(max-width:650px){
+ .site-header{height:76px;min-height:76px}
+ .brand-logo{width:88px;height:70px}
+ .footer-logo{width:118px;height:102px}
+ .scent-intro-brand{width:min(78vw,330px)}
+}
