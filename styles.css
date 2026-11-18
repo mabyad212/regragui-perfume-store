@@ -116,3 +116,18 @@
 }
 
 .order-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}.order-modal.is-open{display:flex}.order-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(5px)}.order-dialog{position:relative;z-index:1;width:min(100%,520px);max-height:90vh;overflow:auto;background:#11100d;border:1px solid rgba(197,165,104,.48);padding:34px;box-shadow:0 25px 80px rgba(0,0,0,.55);color:var(--ivory)}.order-close{position:absolute;top:12px;right:16px;border:0;background:none;color:var(--gold2);font-size:30px;cursor:pointer}.order-dialog h2{font:400 clamp(28px,4vw,38px)/1.15 var(--serif);margin:10px 30px 12px 0}.order-product{color:var(--gold2);font-size:13px;border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:20px}.order-dialog form{display:grid;gap:14px}.order-dialog label{display:grid;gap:7px;color:#c9c0b2;font-size:12px}.order-dialog input,.order-dialog textarea{width:100%;border:1px solid rgba(197,165,104,.28);background:#090908;color:#f4eee3;padding:13px 14px;font:inherit;outline:none}.order-dialog input:focus,.order-dialog textarea:focus{border-color:var(--gold2)}.order-dialog textarea{resize:vertical;min-height:78px}.order-submit{width:100%;margin-top:5px;cursor:pointer}.order-privacy{font-size:11px;line-height:1.6;color:#8e887e;text-align:center;margin:0}@media(max-width:600px){.order-modal{padding:12px}.order-dialog{padding:28px 20px;max-height:94vh}}
+
+/* Cinematic fragrance intro */
+.scent-intro{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 55%,#211b12 0%,#0b0b0a 58%,#050504 100%);animation:scentIntroOut 1s ease 2.35s forwards;pointer-events:none}
+.scent-intro-brand{position:relative;z-index:2;display:grid;justify-items:center;gap:15px;opacity:0;transform:translateY(12px);animation:scentBrandIn 1.15s ease .35s forwards}
+.scent-intro-mark{width:66px;height:66px;border:1px solid rgba(224,197,140,.8);border-radius:50%;display:grid;place-items:center;color:#e0c58c;font:42px var(--serif);box-shadow:0 0 34px rgba(197,165,104,.18)}
+.scent-intro-name{color:#eee9df;font:600 12px var(--sans);letter-spacing:.34em;text-align:center}.scent-intro-name small{display:block;margin-top:8px;color:#c5a568;font-size:8px;letter-spacing:.35em}
+.scent-smoke{position:absolute;width:min(75vw,760px);height:min(75vw,760px);border-radius:50%;filter:blur(48px);opacity:0;background:radial-gradient(ellipse at 50% 50%,rgba(211,201,180,.20) 0%,rgba(171,151,119,.12) 22%,rgba(117,107,91,.07) 42%,transparent 70%);mix-blend-mode:screen;will-change:transform,opacity}
+.scent-smoke-one{left:-22%;bottom:-45%;animation:smokeRise 3.6s ease-out .05s forwards}
+.scent-smoke-two{right:-24%;bottom:-48%;animation:smokeRiseTwo 3.8s ease-out .2s forwards}
+.scent-smoke-three{left:18%;bottom:-58%;width:min(65vw,640px);height:min(65vw,640px);animation:smokeRise 3.9s ease-out .45s forwards}
+@keyframes smokeRise{0%{opacity:0;transform:translate3d(-8%,18%,0) scale(.72) rotate(-12deg)}25%{opacity:.8}100%{opacity:0;transform:translate3d(12%,-105%,0) scale(1.55) rotate(18deg)}}
+@keyframes smokeRiseTwo{0%{opacity:0;transform:translate3d(10%,20%,0) scale(.68) rotate(12deg)}25%{opacity:.72}100%{opacity:0;transform:translate3d(-12%,-110%,0) scale(1.65) rotate(-20deg)}}
+@keyframes scentBrandIn{to{opacity:1;transform:translateY(0)}}
+@keyframes scentIntroOut{to{opacity:0;visibility:hidden}}
+@media(prefers-reduced-motion:reduce){.scent-intro{animation:scentIntroOut .4s ease .3s forwards}.scent-intro-brand,.scent-smoke{animation:none;opacity:1}}
