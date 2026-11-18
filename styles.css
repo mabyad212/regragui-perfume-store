@@ -46,3 +46,11 @@
 .top-seller-card h3{font:19px var(--serif);font-weight:400;color:var(--gold2);margin:14px 5px 8px}
 @media(max-width:900px){.top-seller-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.top-sellers{padding-top:65px;padding-bottom:70px}.top-seller-grid{gap:12px}.top-seller-card{padding:7px}.top-seller-card h3{font-size:16px}}
+
+
+/* Homepage top-seller prices and catalogue gateway */
+.top-seller-price{margin:0 5px 8px;color:var(--gold2);font-size:12px;letter-spacing:.08em}
+.catalogue-invite{text-align:center;padding-top:85px;padding-bottom:90px;background:#10100e}
+.catalogue-invite h2{font:400 clamp(34px,4vw,48px)/1.15 var(--serif);margin:18px 0;color:var(--ivory)}
+.catalogue-invite>p:not(.eyebrow){color:#aaa398;font-size:13px;line-height:1.8;margin:0 auto 25px}
+.catalogue-invite .button{margin-top:4px}
