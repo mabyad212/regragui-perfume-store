@@ -44,3 +44,7 @@ document.getElementById("orderForm").addEventListener("submit",e=>{e.preventDefa
 
 function setLanguage(lang){currentLanguage=lang;document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;if(translations[lang][key])el.innerHTML=translations[lang][key]});renderProducts()}
 document.getElementById("languageSelect").addEventListener("change",e=>setLanguage(e.target.value));document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{currentFilter=btn.dataset.filter;document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===btn));renderProducts()}));const menuToggle=document.getElementById("menuToggle");menuToggle.addEventListener("click",()=>{const nav=document.getElementById("mainNav");const open=nav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open))});document.querySelectorAll(".main-nav a").forEach(a=>a.addEventListener("click",()=>{document.getElementById("mainNav").classList.remove("open");menuToggle.setAttribute("aria-expanded","false")}));document.getElementById("year").textContent=new Date().getFullYear();renderProducts();
+
+// Dismiss the cinematic fragrance intro after its smoke animation.
+const scentIntro=document.getElementById("scentIntro");
+if(scentIntro){scentIntro.addEventListener("animationend",e=>{if(e.animationName==="scentIntroOut")scentIntro.remove()});window.setTimeout(()=>scentIntro.remove(),3800)}
