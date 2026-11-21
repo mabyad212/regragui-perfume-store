@@ -10,3 +10,6 @@
 .hero-object .orbit{animation:orbitPulse 7s ease-in-out infinite}
 .hero-object .object-light{animation:lightBreath 5s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.hero-copy .eyebrow,.hero-copy h1,.hero-copy .hero-description,.hero-copy .hero-buttons{animation:none}}
+
+/* Official full Regragui identity in the intro loader */
+.preloader-logo{display:block;width:min(300px,68vw);height:auto;max-height:205px;object-fit:contain;filter:drop-shadow(0 0 18px #c6a15b22)}
